@@ -39,6 +39,8 @@ A Goclipse project can work in two ways:
 ##### Build:
 The `go` tool will be used to build the project. The output of this tool will be displayed in a console. Additionally, error markers resulting from the build will be collected and displayed in the the Go editor and Problems view.
 
+Goclipse will specify the `./...` pattern to `go build`, to match all Go packages in the project/GOPATH being built. **(note that .go files directly under src/ do not belong to any Go package and as such will not be built by this command)**. For more information see the command line help: `go help packages`. Additional per-project build options can be specified in the project Properties dialog, in the `Go Project Configuration` page.
+
 Note that if the `Project / Build Automatically` option in the main menu is enabled (the default), a workspace build will be requested whenever any file is saved. Turn this on or off as desired.
 
 ### Editor and Navigation
